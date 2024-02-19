@@ -1,0 +1,36 @@
+n=int(input())
+k=int(input())
+L=[]
+t=0
+for i in range(0, n):
+      l=[]
+      for j in range(0, n):
+            l.append(t)
+            t+=1
+      L.append(l)
+for i in L:
+      print(i)
+
+if k%n==0:
+      if k==0:
+            print(n+1)
+      elif k==n**2-n:
+            print(n*2-2*n+n*2-n+1)
+      else:
+            print(3*k+1)
+elif k%n!=0 and   k<n:
+      if k==n-1:
+            print(2*k+n-1)
+      else:
+            print(3*k+n)
+elif k%n==n-1:
+      if k==n**2-1:
+            print(3*k-2*n-2)
+      else:
+            print(4*k-n-2)
+
+elif  k>n**2-n:
+      print(4*k-2*n-1)
+else:
+      print(5*k-n-1)
+          
